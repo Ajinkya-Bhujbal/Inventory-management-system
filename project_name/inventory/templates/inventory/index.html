@@ -1,0 +1,34 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .background {
+		background-image: url("{% static 'images/background.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 100vh; /* Ensures it covers the full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-box {
+        background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for readability */
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="background">
+    <div class="content-box">
+        <h1 class="fw-light">Track and Manage Your Inventory</h1>
+        <p class="fw-light">Keep track of your inventory and receive quantity alerts for low inventory</p>
+        <div>
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">Get Started Now!</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
