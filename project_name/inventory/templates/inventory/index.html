@@ -1,9 +1,10 @@
 {% extends 'inventory/base.html' %}
 {% load static %}
+
 {% block content %}
 <style>
     .background {
-		background-image: url("{% static 'images/background.jpg' %}");
+        background-image: url("{% static 'images/background.jpg' %}");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -18,17 +19,35 @@
         padding: 2rem;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Center text inside the content box */
+    }
+
+    .content-box h1 {
+        font-weight: lighter;
+        font-size: 2rem;
+    }
+
+    .content-box p {
+        font-weight: lighter;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
     }
 </style>
 
 <div class="background">
     <div class="content-box">
         <h1 class="fw-light">Track and Manage Your Inventory</h1>
-        <p class="fw-light">Keep track of your inventory and receive quantity alerts for low inventory</p>
+        <p class="fw-light">Keep track of your inventory and receive quantity alerts for low inventory.</p>
         <div>
             <a href="{% url 'dashboard' %}" class="btn btn-primary">Get Started Now!</a>
         </div>
     </div>
 </div>
-{% endblock content %}
 
+{% endblock content %}
